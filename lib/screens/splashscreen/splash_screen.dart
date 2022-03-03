@@ -24,7 +24,7 @@ class _SplashState extends State<Splash> {
           context,
           MaterialPageRoute(
               builder: (context) => MyHomePage(
-                    title: 'test',
+                    title: 'test1',
                   )));
     });
   }
@@ -33,9 +33,19 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text('Splash Screen',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              child: Text('Splash Screen',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            ),
+          ],
         ),
       ),
     );
