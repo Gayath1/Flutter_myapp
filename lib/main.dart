@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Utilities/routes.dart';
 import 'package:myapp/Screens/login/login_screen.dart';
+import 'package:myapp/Screens/signup/signup_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: new ThemeData(primarySwatch: Colors.indigo),
+      // theme: new ThemeData(primarySwatch: Colors.indigo),
       initialRoute: '/',
       routes: {
         MyRoutes.loginScreen: (context) => LoginScreen(),
+        MyRoutes.signScreen: (context) => SignScreen(),
       },
     );
   }

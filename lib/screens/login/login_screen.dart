@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:myapp/Utilities/routes.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -106,10 +107,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Text('Don\'t have an account?'),
                       TextButton(
                         onPressed: (() {
-                          // Navigator.pushNamed(
-                          //   context,
-                          //   MyRoutes.signUp,
-                          // );
+                          Navigator.pushNamed(
+                            context,
+                            MyRoutes.signScreen,
+                          );
                         }),
                         child: const Text(
                           'Sign Up',
