@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/home/home.dart';
+import 'package:myapp/screens/login/login_screen.dart';
 
 class Splash extends StatefulWidget {
   // const Splash({ Key? key }) : super(key: key);
@@ -23,8 +23,8 @@ class _SplashState extends State<Splash> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-              builder: (context) => MyHomePage(
-                    title: 'test1',
+              builder: (context) => LoginScreen(
+                  // title: 'test1',
                   )));
     });
   }
