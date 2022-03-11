@@ -40,7 +40,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0)),
                       hintText: 'Enter Your Email',
+                      hintStyle: TextStyle(
+                        fontFamily: 'SFProText',
+                      ),
                       labelText: 'Username',
+                      labelStyle: TextStyle(
+                        fontFamily: 'SFProText',
+                      ),
                       contentPadding: EdgeInsets.all(15.0),
                     ),
                     onChanged: (value) {
@@ -67,7 +73,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       // suffixIconConstraints:
                       //     BoxConstraints(maxHeight: 20, maxWidth: 20),
                       hintText: 'Enter Your Password',
+                      hintStyle: TextStyle(
+                        fontFamily: 'SFProText',
+                      ),
                       labelText: 'Password',
+                      labelStyle: TextStyle(
+                        fontFamily: 'SFProText',
+                      ),
                       contentPadding: EdgeInsets.all(15.0),
                     ),
                     onChanged: (value) {
@@ -78,8 +90,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       // Navigator.pushNamed(context, MyRoutes.forgotPassword);
                     },
+                    style: TextButton.styleFrom(
+                      primary: Colors.indigo,
+                    ),
                     child: const Text(
                       'Forgot Password?',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'SFPRODISPLAYBOLD',
+                      ),
                     ),
                   ),
                   Container(
@@ -97,14 +116,21 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
                           'Login',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'SFPRODISPLAYBOLD',
+                          ),
                         ),
                       ),
                     ),
                   ),
                   Row(
                     children: [
-                      const Text('Don\'t have an account?'),
+                      const Text('Don\'t have an account?',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontFamily: 'SFPRODISPLAYBOLD',
+                          )),
                       TextButton(
                         onPressed: (() {
                           Navigator.pushNamed(
@@ -112,11 +138,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             MyRoutes.signScreen,
                           );
                         }),
+                        style: TextButton.styleFrom(
+                          primary: Colors.indigo,
+                        ),
                         child: const Text(
                           'Sign Up',
                           style: TextStyle(
                             fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                            fontFamily: 'SFPRODISPLAYBOLD',
                           ),
                         ),
                       ),
