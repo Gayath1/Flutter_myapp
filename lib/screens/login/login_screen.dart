@@ -67,7 +67,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             _toggle();
                           },
                           icon: Icon(
-                            FontAwesomeIcons.eyeSlash,
+                            _obscureText
+                                      ? FontAwesomeIcons.eyeSlash
+                                      : FontAwesomeIcons.eye,
                             color: Color.fromARGB(175, 175, 175, 175),
                           )),
                       // suffixIconConstraints:
