@@ -12,9 +12,12 @@ class SignScreen extends StatefulWidget {
 
 class _SignScreenState extends State<SignScreen> {
   bool _obscureText = true;
+  String _icons = 'FontAwesomeIcons.eyeSlash';
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
+      _icons =
+          _obscureText ? 'FontAwesomeIcons.eyeSlash' : 'FontAwesomeIcons.eye';
     });
   }
 
@@ -29,10 +32,21 @@ class _SignScreenState extends State<SignScreen> {
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  Image(
-                      image: AssetImage('assets/images/login.png'),
-                      fit: BoxFit.cover,
-                      height: 180),
+                  // Image(
+                  //     image: AssetImage('assets/images/login.png'),
+                  //     fit: BoxFit.cover,
+                  //     height: 180),
+                  SizedBox(height: 10),
+                  SizedBox(height: 10),
+                  SizedBox(height: 10),
+                  SizedBox(height: 10),
+                  Text("Sign Up",
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontFamily: 'SFPRODISPLAYBOLD',
+                      )),
+                  SizedBox(height: 10),
+                  SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 10,
@@ -57,11 +71,17 @@ class _SignScreenState extends State<SignScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0),
                               borderSide: BorderSide(
-                                  color: Color.fromARGB(255, 189, 189, 189)),
+                                  color: Color.fromARGB(255, 189, 189, 189),
+                                  width: 2.0),
                             ),
-                            hintText: 'Enter Your Email',
-                            labelText: 'Username',
+
+                            hintText: 'First Name',
+                            hintStyle: TextStyle(
+                              fontFamily: 'SFProText',
+                            ),
+                            labelText: 'First Name',
                             labelStyle: TextStyle(
+                                fontFamily: 'SFProText',
                                 color: Color.fromARGB(255, 68, 68, 68)),
                             contentPadding: EdgeInsets.all(15.0),
                           ),
@@ -72,12 +92,33 @@ class _SignScreenState extends State<SignScreen> {
                         SizedBox(height: 10),
                         SizedBox(height: 10),
                         TextFormField(
+                          cursorColor: Color.fromARGB(255, 255, 255, 255),
                           decoration: InputDecoration(
+                            fillColor: Color.fromARGB(95, 226, 226, 226),
+                            filled: true,
                             // icon: Icon(Icons.email),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
-                            hintText: 'Enter Your Email',
-                            labelText: 'Username',
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189)),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189),
+                                  width: 2.0),
+                            ),
+                            hintText: 'Last Name',
+                            hintStyle: TextStyle(
+                              fontFamily: 'SFProText',
+                            ),
+                            labelText: 'Last Name',
+                            labelStyle: TextStyle(
+                                fontFamily: 'SFProText',
+                                color: Color.fromARGB(255, 68, 68, 68)),
                             contentPadding: EdgeInsets.all(15.0),
                           ),
                           onChanged: (value) {
@@ -87,12 +128,33 @@ class _SignScreenState extends State<SignScreen> {
                         SizedBox(height: 10),
                         SizedBox(height: 10),
                         TextFormField(
+                          cursorColor: Color.fromARGB(255, 255, 255, 255),
                           decoration: InputDecoration(
+                            fillColor: Color.fromARGB(95, 226, 226, 226),
+                            filled: true,
                             // icon: Icon(Icons.email),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
-                            hintText: 'Enter Your Email',
-                            labelText: 'Username',
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189)),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189),
+                                  width: 2.0),
+                            ),
+                            hintText: 'Email',
+                            hintStyle: TextStyle(
+                              fontFamily: 'SFProText',
+                            ),
+                            labelText: 'Email',
+                            labelStyle: TextStyle(
+                                fontFamily: 'SFProText',
+                                color: Color.fromARGB(255, 68, 68, 68)),
                             contentPadding: EdgeInsets.all(15.0),
                           ),
                           onChanged: (value) {
@@ -102,12 +164,44 @@ class _SignScreenState extends State<SignScreen> {
                         SizedBox(height: 10),
                         SizedBox(height: 10),
                         TextFormField(
+                          obscureText: _obscureText,
+                          cursorColor: Color.fromARGB(255, 255, 255, 255),
                           decoration: InputDecoration(
+                            fillColor: Color.fromARGB(95, 226, 226, 226),
+                            filled: true,
                             // icon: Icon(Icons.email),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
-                            hintText: 'Enter Your Email',
-                            labelText: 'Username',
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189)),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189),
+                                  width: 2.0),
+                            ),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  _toggle();
+                                },
+                                icon: Icon(
+                                  _obscureText
+                                      ? FontAwesomeIcons.eyeSlash
+                                      : FontAwesomeIcons.eye,
+                                  color: Color.fromARGB(175, 175, 175, 175),
+                                )),
+                            hintText: 'Password',
+                            hintStyle: TextStyle(
+                              fontFamily: 'SFProText',
+                            ),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(
+                                fontFamily: 'SFProText',
+                                color: Color.fromARGB(255, 68, 68, 68)),
                             contentPadding: EdgeInsets.all(15.0),
                           ),
                           onChanged: (value) {
@@ -119,22 +213,41 @@ class _SignScreenState extends State<SignScreen> {
                         TextFormField(
                           obscureText: _obscureText,
                           decoration: InputDecoration(
-                            // icon: Icon(Icons.lock),
+                            fillColor: Color.fromARGB(95, 226, 226, 226),
+                            filled: true,
+                            // icon: Icon(Icons.email),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189)),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 189, 189, 189),
+                                  width: 2.0),
                             ),
                             suffixIcon: IconButton(
                                 onPressed: () {
                                   _toggle();
                                 },
                                 icon: Icon(
-                                  FontAwesomeIcons.eyeSlash,
+                                  _obscureText
+                                      ? FontAwesomeIcons.eyeSlash
+                                      : FontAwesomeIcons.eye,
                                   color: Color.fromARGB(175, 175, 175, 175),
                                 )),
-                            // suffixIconConstraints:
-                            //     BoxConstraints(maxHeight: 20, maxWidth: 20),
-                            hintText: 'Enter Your Password',
-                            labelText: 'Password',
+                            hintText: 'Confirm Password',
+                            hintStyle: TextStyle(
+                              fontFamily: 'SFProText',
+                            ),
+                            labelText: 'Confirm Password',
+                            labelStyle: TextStyle(
+                                fontFamily: 'SFProText',
+                                color: Color.fromARGB(255, 68, 68, 68)),
                             contentPadding: EdgeInsets.all(15.0),
                           ),
                           onChanged: (value) {
@@ -145,8 +258,15 @@ class _SignScreenState extends State<SignScreen> {
                           onPressed: () {
                             // Navigator.pushNamed(context, MyRoutes.forgotPassword);
                           },
+                          style: TextButton.styleFrom(
+                            primary: Colors.indigo,
+                          ),
                           child: const Text(
                             'Forgot Password?',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontFamily: 'SFPRODISPLAYBOLD',
+                            ),
                           ),
                         ),
                         Container(
@@ -164,14 +284,22 @@ class _SignScreenState extends State<SignScreen> {
                               padding: const EdgeInsets.all(10.0),
                               child: Text(
                                 'Sign Up',
-                                style: TextStyle(fontSize: 20),
+                                style: TextStyle(
+                                    fontFamily: 'SFPRODISPLAYBOLD',
+                                    fontSize: 20),
                               ),
                             ),
                           ),
                         ),
                         Row(
                           children: [
-                            const Text('Have an account?'),
+                            const Text(
+                              'Have an account?',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'SFPRODISPLAYBOLD',
+                              ),
+                            ),
                             TextButton(
                               onPressed: (() {
                                 Navigator.pushNamed(
@@ -179,11 +307,14 @@ class _SignScreenState extends State<SignScreen> {
                                   MyRoutes.loginScreen,
                                 );
                               }),
+                              style: TextButton.styleFrom(
+                                primary: Colors.indigo,
+                              ),
                               child: const Text(
                                 'Login',
                                 style: TextStyle(
                                   fontSize: 15,
-                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'SFPRODISPLAYBOLD',
                                 ),
                               ),
                             ),
