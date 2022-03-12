@@ -12,12 +12,10 @@ class SignScreen extends StatefulWidget {
 
 class _SignScreenState extends State<SignScreen> {
   bool _obscureText = true;
-  String _icons = 'FontAwesomeIcons.eyeSlash';
+
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
-      _icons =
-          _obscureText ? 'FontAwesomeIcons.eyeSlash' : 'FontAwesomeIcons.eye';
     });
   }
 
@@ -258,23 +256,33 @@ class _SignScreenState extends State<SignScreen> {
                           onPressed: () {
                             // Navigator.pushNamed(context, MyRoutes.forgotPassword);
                           },
-                          style: TextButton.styleFrom(
-                            primary: Colors.indigo,
-                          ),
                           child: const Text(
                             'Forgot Password?',
                             style: TextStyle(
                               fontSize: 15,
+                              color: Color.fromARGB(255, 4, 92, 233),
                               fontFamily: 'SFPRODISPLAYBOLD',
                             ),
                           ),
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width * 01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 14, 203, 255),
+                                  Color.fromARGB(255, 4, 92, 233)
+                                ],
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomRight,
+                                stops: [0.0, 1.0],
+                                tileMode: TileMode.clamp),
+                          ),
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.indigo,
+                              primary: Colors.transparent,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
@@ -307,13 +315,14 @@ class _SignScreenState extends State<SignScreen> {
                                   MyRoutes.loginScreen,
                                 );
                               }),
-                              style: TextButton.styleFrom(
-                                primary: Colors.indigo,
-                              ),
+                              // style: TextButton.styleFrom(
+                              //   primary: Colors.indigo,
+                              // ),
                               child: const Text(
                                 'Login',
                                 style: TextStyle(
                                   fontSize: 15,
+                                  color: Color.fromARGB(255, 4, 92, 233),
                                   fontFamily: 'SFPRODISPLAYBOLD',
                                 ),
                               ),
